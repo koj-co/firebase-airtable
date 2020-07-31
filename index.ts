@@ -1,6 +1,11 @@
 import { cosmicSync, config } from "@anandchowdhary/cosmic";
 import { initializeApp, credential, firestore } from "firebase-admin";
-import axios from "axios";
+const airtable = require("airtable");
+airtable.configure({
+  endpointUrl: "https://api.airtable.com",
+  apiKey: config("airtableApiKey"),
+});
+const base = airtable.base(config("airtableBase"));
 
 cosmicSync("firebase-airtable");
 
@@ -9,7 +14,16 @@ initializeApp({
   databaseURL: config("firebaseDatabaseUrl"),
 });
 
-const subscribers = firestore().collection("subscribers-v2");
+const subscribers = firestore().collection(config("firebaseCollection"));
+
+const createRecord = (record: any) =>
+  new Promise((resolve, reject) => {
+    base(config("airtableTable")).create(record, (error: Error) => {
+      if (error) return reject(error);
+      console.log("Created record");
+      return resolve();
+    });
+  });
 
 const sent: string[] = [];
 const firebaseAirtable = async () => {
