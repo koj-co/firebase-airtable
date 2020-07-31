@@ -1,0 +1,32 @@
+{
+  "name": "firebase-airtable",
+  "version": "0.0.0",
+  "description": "Automagically add new Firebase Cloud Firestore database records to Airtable in real time",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "ts-node index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koj-co/firebase-airtable.git"
+  },
+  "keywords": [
+    "firebase",
+    "airtable",
+    "automation"
+  ],
+  "author": "Anand Chowdhary <mail@anandchowdhary.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koj-co/firebase-airtable/issues"
+  },
+  "homepage": "https://github.com/koj-co/firebase-airtable#readme"
+}
