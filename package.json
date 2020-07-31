@@ -40,7 +40,6 @@
   "dependencies": {
     "@anandchowdhary/cosmic": "^1.0.0",
     "airtable": "^0.8.1",
-    "axios": "^0.19.2",
     "firebase-admin": "^9.0.0"
   }
 }
