@@ -37,6 +37,8 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "@anandchowdhary/cosmic": "^1.0.0"
+    "@anandchowdhary/cosmic": "^1.0.0",
+    "axios": "^0.19.2",
+    "firebase-admin": "^9.0.0"
   }
 }
