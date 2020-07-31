@@ -28,5 +28,12 @@
   "bugs": {
     "url": "https://github.com/koj-co/firebase-airtable/issues"
   },
-  "homepage": "https://github.com/koj-co/firebase-airtable#readme"
+  "homepage": "https://github.com/koj-co/firebase-airtable#readme",
+  "devDependencies": {
+    "@semantic-release/git": "^9.0.0",
+    "semantic-release": "^17.1.1",
+    "semantic-release-gitmoji": "^1.3.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
 }
